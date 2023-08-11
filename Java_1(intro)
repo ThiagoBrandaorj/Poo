@@ -150,4 +150,91 @@ public class App {
         }
     }
  
-}
+
+
+    public static void ePrimo(int num){ 
+        boolean primo = true;
+       for(int p = 2 ; p < num ; p++){
+           if (num % p == 0) {
+               System.out.println(p);
+               primo = false;
+               
+            }
+
+         }
+         if (primo == true){
+            System.out.println("número é primo ");
+
+         }
+         else{
+            System.out.println("número naõ é primo");
+
+         }
+    }
+
+    public static void media(double ap1, double ap2 , double ac){
+        double M = ((ap1 + ap2) * 0.4 + ac * 0.2);
+        System.out.println("média =" + M );
+    }
+
+
+    public static void exibe_num(){
+        for(int i = 150 ;i < 201 ;i++){
+            System.out.println(i);
+
+        } 
+    }
+
+    public static void diasemana(int n){
+        switch (n) {
+            case 1:
+                System.out.println(" 1 - Domingo");
+                break;
+            case 2:
+                System.out.println("2 - Segunda");
+                break;
+            case 3:
+                System.out.println("3 - Terça");
+                break;
+            case 4:
+                System.out.println(" 4 - Quarta");
+                break;
+            case 5:
+                System.out.println("5 - Quinta");
+                break;
+            case 6:
+                System.out.println("6 - Sexta");
+                break;
+            case 7:
+                System.out.println("7 - Sabado");
+                    break;
+            default:
+            System.out.println("Valor inválido.");
+            
+        }
+
+    }
+
+    public static void e_bissesexto(int ano){
+
+        if (ano % 4 == 0){
+            if (ano % 100 == 0){
+                if (ano % 400 == 0){
+                    System.out.println(ano + "é bissexto");
+                }
+                else{
+                    System.out.println(ano + "não é bissexto");
+                }
+            }
+            else{
+                System.out.println(ano + "é bissexto");
+            }
+
+        }
+        else{
+            System.out.println(ano + "não é bissexto");
+
+        }
+    }
+
+    }
