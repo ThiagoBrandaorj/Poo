@@ -6,6 +6,7 @@ public class App {
         alunos.adicionar("76800", "Ciência de dados", "Maria");
 
         alunos.remover("76800");
+        alunos.atualizar("202301135265","Eng Mecânica");
 
         System.out.println(alunos.listarAluno("12345"));
         System.out.println("-------------------");
