@@ -24,4 +24,9 @@ public class Aluno {
     public String getMatricula() {
         return matricula;
     }
+
+    @Override
+    public String toString() {
+        return this.matricula + " / " + this.nome + " / " + this.curso;
+    }
 }

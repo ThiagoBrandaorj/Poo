@@ -8,7 +8,7 @@ public class AlunoDAO {
 
    public void setAlunos(LinkedList<Aluno> alunos) {
        this.alunos = alunos;
-   }
+    }
 
     public LinkedList<Aluno> getAlunos() {
         return alunos;
@@ -20,24 +20,39 @@ public class AlunoDAO {
 
     public void remover(String matricula){
         for(Aluno str : alunos){
-            if (str.equals(matricula)){
-                alunos.remove();
+            if (str.getMatricula().equals(matricula)){
+                alunos.remove(str);
             }
         };
     }
 
     public void atualizar(String matricula, String novoCurso){
         for(Aluno str : alunos){
-            if (str.equals(matricula)){
+            if (str.getMatricula().equals(matricula)){
                 str.setCurso(novoCurso);
             }
         }
     }
 
-    public void listaraluno(String matricula){
-        for(Aluno str : alunos){
-            if (str.equals(matricula)){
-                alunos.element();
+    public Aluno listarAluno(String matricula){
+        for(Aluno str : this.alunos){
+            if (str.getMatricula().equals(matricula)){
+                return str;
             }
-    }}
+        }
+
+        return null;
+    }
+
+    public void listarAlunos(){
+        for(Aluno str : this.alunos){
+            System.out.println(str);
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "";
+    }
+
 }

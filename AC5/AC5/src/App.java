@@ -7,7 +7,10 @@ public class App {
 
         alunos.remover("76800");
 
-        alunos.toString();
+        System.out.println(alunos.listarAluno("12345"));
+        System.out.println("-------------------");
+
+        alunos.listarAlunos();
     }
 
 }
