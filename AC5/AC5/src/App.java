@@ -11,7 +11,7 @@ public class App {
         System.out.println(alunos.listarAluno("12345"));
         System.out.println("-------------------");
 
-        alunos.listarAlunos();
+        System.out.println(alunos.listarAlunos());
     }
 
 }

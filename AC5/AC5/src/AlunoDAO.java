@@ -44,10 +44,12 @@ public class AlunoDAO {
         return null;
     }
 
-    public void listarAlunos(){
+    public String listarAlunos(){
+        String acumulado = " ";
         for(Aluno str : this.alunos){
-            System.out.println(str);
+            acumulado += str + " ";
         }
+        return acumulado;
     }
 
     @Override
