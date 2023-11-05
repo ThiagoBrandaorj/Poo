@@ -46,9 +46,9 @@ public class AlunoDAO {
     }
 
     public String listarAlunos(){
-        String acumulado = " ";
+        String acumulado = "";
         for(Aluno str : this.alunos){
-            acumulado += str + " ";
+            acumulado += str + " " + "\n";
         }
         return acumulado;
     }

@@ -27,7 +27,7 @@ public class Aluno {
 
     @Override
     public String toString() {
-        return this.matricula + " / " + this.nome + " / " + this.curso;
+        return matricula + " / " + nome + " / " + curso;
     }
 }
 
