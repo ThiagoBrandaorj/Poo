@@ -1,6 +1,8 @@
+package entidades;
+
 public class Aluno {
     public String nome , curso , matricula;
-    Aluno(String matricula ,String curso, String nome){
+    public Aluno(String matricula ,String curso, String nome){
             this.nome = nome;
             this.curso = curso;
             this.matricula = matricula;

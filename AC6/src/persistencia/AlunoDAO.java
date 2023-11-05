@@ -1,9 +1,12 @@
+package persistencia;
 
 import java.util.LinkedList;
 
+import entidades.Aluno;
+
 public class AlunoDAO {
     LinkedList<Aluno> alunos = new LinkedList<>();
-    AlunoDAO() {
+    public AlunoDAO() {
         alunos = new LinkedList<Aluno>();
     }
 
