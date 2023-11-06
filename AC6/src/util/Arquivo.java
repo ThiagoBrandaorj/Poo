@@ -38,7 +38,7 @@ public class Arquivo {
     }
 
     public static void escrever(String caminho, List<String> linhas) throws IOException {
-        BufferedWriter buffWrite = new BufferedWriter(new FileWriter(caminho));
+        BufferedWriter buffWrite = new BufferedWriter(new FileWriter(caminho, true));
 
         for (String linha : linhas) {
             buffWrite.append(linha + "\n");
