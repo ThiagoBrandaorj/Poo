@@ -2,16 +2,16 @@ package programa;
 
 import java.io.IOException;
 
-import persistencia.AlunoDAO;
+import persistencia.AlunoDao;
 import util.LeitoraDados;
 
 public class Gestor {
     LeitoraDados leitoraDados;
-    AlunoDAO dao;
+    AlunoDao dao;
 
     public Gestor (String caminho) throws IOException{
         this.leitoraDados = new LeitoraDados();
-        this.dao = new AlunoDAO();
+        this.dao = new AlunoDao(caminho);
     }
 
     public void exibeOpcoes(){
@@ -40,19 +40,19 @@ public class Gestor {
                 break;
             case "3":
                 System.out.print("Digite a matricula do aluno a ser excluído: ");
-                String cpfExcluir = leitoraDados.lerTexto();
-                if (dao.consultar(matricula) != null) {
-                    dao.remover(cpfExcluir);
-                    System.out.println("CPF excluído com sucesso!");
+                String matriculaExcluir = leitoraDados.lerTexto();
+                if (dao.consultar(matriculaExcluir) != null) {
+                    dao.excluir(matriculaExcluir);
+                    System.out.println("Aluno excluído com sucesso!");
                 } else {
-                    System.out.println("CPF não encontrado!");
+                    System.out.println("Matricula não encontrada!");
                 }
                 break;
             case "4":
-                System.out.print("Digite o CPF do cliente: ");
-                String cpf = leitoraDados.lerTexto();
-                if (dao.consultar(cpf) != null) {
-                    System.out.println(dao.consultar(cpf));
+                System.out.print("Digite a matricula do aluno: ");
+                String matricula = leitoraDados.lerTexto();
+                if (dao.consultar(matricula) != null) {
+                    System.out.println(dao.consultar(matricula));
                 } else {
                     System.out.println("Matricula não encontrada!");
                 }
