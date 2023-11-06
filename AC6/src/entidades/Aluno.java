@@ -1,11 +1,17 @@
 package entidades;
 
+import java.util.Objects;
+
 public class Aluno {
-    public String nome , curso , matricula;
+    private String nome , curso , matricula;
     public Aluno(String matricula ,String curso, String nome){
             this.nome = nome;
             this.curso = curso;
             this.matricula = matricula;
+    }
+
+    public Aluno(String matricula){
+        this.matricula = matricula;
     }
 
     public void setAlunos(String nome) {
@@ -31,5 +37,23 @@ public class Aluno {
     public String toString() {
         return matricula + " / " + nome + " / " + curso;
     }
+
+    @Override
+    public boolean equals(Object obj){
+        if (obj == this){
+            return true;
+        }
+        if (!(obj instanceof Aluno)){
+            return false;
+        }
+        Aluno aluno = (Aluno) obj;
+        return aluno.matricula.equals(this.matricula);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(matricula, curso, nome);
+    }
+
 }
 
