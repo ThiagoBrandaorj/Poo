@@ -5,9 +5,9 @@ import java.util.Objects;
 public class Aluno {
     private String nome , curso , matricula;
     public Aluno(String matricula ,String curso, String nome){
-            this.nome = nome;
-            this.curso = curso;
-            this.matricula = matricula;
+        this.nome = nome;
+        this.curso = curso;
+        this.matricula = matricula;
     }
 
     public Aluno(String matricula){
