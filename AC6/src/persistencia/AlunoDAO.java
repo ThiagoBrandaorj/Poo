@@ -64,7 +64,7 @@ public class AlunoDao {
         List<String> linhas = Arquivo.ler(this.caminho);
 
         for (String linha : linhas) {
-            String[] dadosAluno = linha.split(" - ");
+            String[] dadosAluno = linha.split(" / ");
             this.adicionar(dadosAluno);
         }
     }
